@@ -195,6 +195,6 @@ wait
 ## 8. Reference Report
 
 For a full demonstration log and images, see:
-[Project Report](https://example.com/my-hazelcast-report)
+[Project Report](https://docs.google.com/document/d/1uQLfg6rL0b6XRd9QdQS-sk4a4PkUrmCMqfwd9QK54a4/edit?usp=sharing)
 
 ---
