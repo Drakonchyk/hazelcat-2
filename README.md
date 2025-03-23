@@ -69,7 +69,7 @@ hz start -c hazelcast.yaml
 python app.py
 ```
 
-2. By default, it runs on port 5000 (unless changed).
+2. By default, it runs on port 5100 (unless changed).
 3. You can then call routes, for example:
    - `GET /fill_map`
    - `GET /get_value?key=123`
@@ -88,7 +88,7 @@ python app.py
 ### 4.1 Fill the Map
 - Command (using Flask route as example):
   ```
-  curl http://127.0.0.1:5000/fill_map
+  curl http://127.0.0.1:5100/fill_map
   ```
 - **Expected result:**  
   A message confirming 1000 entries have been put into the map.
@@ -96,7 +96,7 @@ python app.py
 ### 4.2 Get a Value
 - Command:
   ```
-  curl "http://127.0.0.1:5000/get_value?key=123"
+  curl "http://127.0.0.1:5100/get_value?key=123"
   ```
 - **Expected result:**  
   JSON with the retrieved value for key `123`.
@@ -104,9 +104,9 @@ python app.py
 ### 4.3 Increments (No Locks / Pessimistic / Optimistic)
 - Command examples:
   ```
-  curl -X POST "http://127.0.0.1:5000/increment_no_locks?key=test&count=10000"
-  curl -X POST "http://127.0.0.1:5000/increment_pessimistic?key=test&count=10000"
-  curl -X POST "http://127.0.0.1:5000/increment_optimistic?key=test&count=10000"
+  curl -X POST "http://127.0.0.1:5100/increment_no_locks?key=test&count=10000"
+  curl -X POST "http://127.0.0.1:5100/increment_pessimistic?key=test&count=10000"
+  curl -X POST "http://127.0.0.1:5100/increment_optimistic?key=test&count=10000"
   ```
 - **Expected result:**  
   - **No locks**: final value less than `3 × count` if three clients run simultaneously.
