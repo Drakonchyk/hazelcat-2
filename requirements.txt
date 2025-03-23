@@ -1,0 +1,2 @@
+Flask==2.2.3
+hazelcast-python-client==5.3
